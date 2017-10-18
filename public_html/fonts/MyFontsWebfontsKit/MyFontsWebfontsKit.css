@@ -1,0 +1,31 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3439908, 2017-08-21T07:25:05-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: HollhockOrnaments-Regular by Angie Makes
+ * URL: https://www.myfonts.com/fonts/fonted-house/hollyhock/ornaments/
+ * Copyright: Angie Baldelomar
+ *
+ * Webfont: Hollyhock-Regular by Angie Makes
+ * URL: https://www.myfonts.com/fonts/fonted-house/hollyhock/regular/
+ * Copyright: Copyright (c) 2014 by Angie Makes. All rights reserved.
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3439908
+ * Licensed pageviews: 1,010,000
+ *
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/347d24");
+
+
+@font-face {font-family: 'Hollyhock-Regular';src: url('webfonts/347D24_1_0.eot');src: url('webfonts/347D24_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/347D24_1_0.woff2') format('woff2'),url('webfonts/347D24_1_0.woff') format('woff'),url('webfonts/347D24_1_0.ttf') format('truetype'),url('webfonts/347D24_1_0.svg#wf') format('svg');}
