@@ -18,37 +18,85 @@
             </div>
         </section>
         <section id="about">
-            <div class="container">
-                <div class="about row justify-content-center">
-                    <div class="col-12 col-md-6 align-self-center mb-5 mb-md-0">
-                        <div class="d-flex flex-row w-100 justify-content-center">
-                            <h1>The story</h1>
-                        </div>
-                        <div class="pt-5 align-self-center pContainer">
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All dreams usually begin as a fairy tale. But all they need to come true is a little bit of magic.<br>
-                            </p>
-                            <p class=" strong">
-                                <strong>" And for us, that magic begins with the perfect shoes. "</strong><br>
-                            </p>
-                            <div class="gradient">
-                                <p>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That’s why our footwear is handcrafted by European ateliers who are sparked by the dream of crafting the perfect shoe. In their workshops, they still use shoe forms, a hammer and mallet, and — most importantly — their hands to craft each and every shoe with impeccable attention to detail.
-                                </p>
-                                <div>
+                        <div class="container-fluid px-0" id="aboutContainer">
+                            <div class="d-flex flex-row w-100 pb-3 justify-content-center">
+                                <h1>The story</h1>
+                            </div>
+                            <div data-ride="carousel" class="carousel carousel-fade" id="carouselAbout" data-interval="2500">
+                                <ol class="carousel-indicators">
+                                    <li class="active" data-slide-to="0" data-target="#carouselAbout"></li>
+                                    <li data-slide-to="1" data-target="#carouselAbout" class=""></li>
+                                    <li data-slide-to="2" data-target="#carouselAbout" class=""></li>
+                                </ol>
+                                <div role="listbox" class="carousel-inner">
+                                    <div class="carousel-item d-flex align-items-start active" id="firstSlide">
+                                        <div class="">
+                                            <p>"...a little bit of magic in every step"</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-flex align-items-start " id="secondSlide">
+                                        <div class="">
+                                            <p>All dreams usually begin as a fairy tale. But all they need to come true is a little bit of magic.</p><br>
+                                            <p class=" strong">
+                                                <strong>" And for us, that magic begins with the perfect shoes. "</strong>
+                                            </p><br>
+                                            <p>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That’s why our footwear is handcrafted by European ateliers who are sparked by the dream of crafting the perfect shoe. In their workshops, they still use shoe forms, a hammer and mallet, and — most importantly — their hands to craft each and every shoe with impeccable attention to detail.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-flex align-items-start " id="thirdtSlide">
+                                        <div class="">
+                                            <p class=" strong">
+                                                <strong>" Each shoe is the handcrafted embodiment of a dream come true. "</strong>
+                                            </p><br>
+                                            <p>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drawing inspiration from European luxury design and tradition, we create exquisite footwear that is stylish, yet wearable, for the modern woman. Our exclusive shoe line combines the finest natural leathers and vibrant color patterns and weaves them into upscale, original designs that are as beautiful as they are comfortable. Additionally, in a world where “one-size-fits-all” is becoming the norm, we have the ability to create custom looks for each woman’s individuality thanks to our shoes’ handcrafted nature.
+                                            </p><br>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-flex align-items-start" id="fourthSlide">
+                                        <div class="">
+                                            <p class=" strong">
+                                                <strong>" And what’s better, it’s still possible to have the perfect shoe at an affordable cost. "</strong>
+                                            </p><br>
+                                            <p>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For us, shoes are more than an accessory or utility. They can evoke your individual sense of style, create confidence, exude empowerment, or provide comfort when navigating through cobblestone alleyways or the concrete streets of Fifth Avenue.
+                                            </p><br>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-flex align-items-start" id="fifthSlide">
+                                        <div class="">
+                                            <p class=" strong">
+                                                " We believe that through the magic of beautiful shoes, you can be the fairy godmother of your own dreams. "
+                                            </p><br>
+                                            <p class="text-left">Be confident.</p>
+                                            <p class="text-center">Be elegant.</p>
+                                            <p class="text-right">Be remembered.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-flex align-items-start" id="sixthSlide">
+                                        <div class="">
+                                            <p class="text-center">Be the fairy godmother of your happily ever after.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item d-flex align-items-start" id="seventhSlide">
+                                        <div class="">
+                                            <p class="text-right">la Baguette <em>de la</em> Marraine</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="readMore">
-                                <a href="about/#aboutPage">read more</a>
+                                <a data-slide="prev" role="button" href="#carouselAbout" class="carousel-control-prev">
+                                    <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a data-slide="next" role="button" href="#carouselAbout" class="carousel-control-next">
+                                    <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-10 col-md-5 align-self-center flex-md-first">
-                        <figure>
-                            <img src="img/bm/aboutShoe.jpg" alt="" class="aboutImg">
-                            <figcaption>Baguette Shoes</figcaption>
-                        </figure>
-                    </div>
                 </div>
             </div>
         </section>
