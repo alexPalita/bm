@@ -39,10 +39,21 @@ h1 {
     padding-top: 3rem; /* 47/16 */
 }
 
-@media (min-width: 992px) {
+@media (min-width: 400px) {
     h1 {
         font-size: 7rem;
     }
+}
+
+@media (min-width: 992px) {
+    /*h1 {
+        font-size: 7rem;
+    }*/
+}
+
+section {
+    /*margin-top: -5rem;*/
+    padding-top: 2rem;
 }
 
 h1 em {
@@ -77,6 +88,20 @@ h2 {
         -o-filter: blur(0.1875rem); /* 3/16 */
         filter: blur(0.1875rem); /* 3/16 */
     }
+ }
+
+.sectionTitle {
+    overflow: hidden;
+}
+
+ .curlLeft {
+    margin: 0 13px 33px 0;
+    height: 1rem;
+ }
+
+ .curlRight {
+    margin: 0 0 33px 13px;
+    height: 1rem;
  }
 
 /* END GENERAL..............................................................................................................................*/
@@ -125,7 +150,7 @@ li {
     }
 
     #navContainer.visible {
-        height: 28.625rem;
+        height: 27.5rem;
         padding-bottom: 1rem;
         box-sizing: content-box;
     }
@@ -178,7 +203,7 @@ li {
     color: rgba(237, 157, 177, 0.6) !important;
 }
 
-#navbar .nav-item .active , #navbar .nav-item #on {
+#navbar .nav-item .active , #navbar .nav-item .on {
     color: rgba(237, 157, 177, 1) !important;
 }
 
@@ -269,8 +294,8 @@ li {
 }
 
 .socialBox img {
-    width: 3.75rem !important; /* 60/16 */
-    height: 3.75rem !important; /* 60/16 */
+    width: 2.75rem !important; /* 60/16 */
+    height: 2.75rem !important; /* 60/16 */
 }
 
 @media (min-width: 992px) {
@@ -298,7 +323,7 @@ li {
 
 /* NOTE: START LANDING PAGE.................................................................................................................*/
 
-#about, #contact {
+#aboutSection  , #contactSection  {
     -webkit-box-shadow: 0 0 31px rgba(0,0,0,0.2);
     box-shadow: 0 0 31px rgba(0,0,0,0.2);
     background-color: white;
@@ -331,6 +356,10 @@ li {
 
         #home > picture {
             margin: auto;
+        }
+
+        #home > div {
+            position: relative;
         }
 
         #home h1 {
@@ -389,57 +418,108 @@ li {
 
 /*......NOTE:START #about...................................................................................................................*/
 
-        .readMore {
-            position: absolute;
-            bottom: 11%;
-            right: 18%
+        #aboutSection  {
+            position: relative;
         }
 
-        #about {
-            z-index: -1;
-            background-color: white;
-            height: 37.5rem;
+        #aboutSection  > div:nth-child(2) {
+            margin-top: -40%;
         }
 
-        .aboutImg {
-            width: 100%;
-            height: auto;
+
+        @media (max-width:767px) and (orientation:landscape),
+               (min-width: 576px) {
+            #aboutSection  > div:nth-child(2) {
+                margin-top: 0;
+            }
+
         }
 
-        .about p {
-            font-family: "Poiret One";
-            font-weight: normal;
-            font-size: 1.125rem; /* 18/16 */
-            width: 100%;
-            text-align: left;
+        #aboutSection  h1 {
+            padding-top: 3rem;
         }
 
-        .strong {
-            font-size: 1.25rem;/* 20/16 */
-            text-align: center !important;
-            color: rgba(0, 0, 0, 0.6);
-        }
-
-        .about > div {
-            width: 100%;
-        }
-
-        .about figcaption {
+        #aboutSection  .sectionTitle .curlLeft,
+        #aboutSection  .sectionTitle .curlRight {
             display: none;
         }
 
-        .about figure {
-            height: 100%;
-        }
-
-        #aboutPage p {
-            font-size: 1rem; /* 18/16 */
-        }
-
-        @media (min-width: 1110px) {
-            #aboutPage p {
-                font-size: 1.125rem;
+        @media (max-width:767px) and (orientation:landscape),
+               (min-width: 768px) {
+            #aboutSection  .sectionTitle .curlLeft,
+            #aboutSection  .sectionTitle .curlRight {
+                display: block;
             }
+        }
+
+        .aboutWrapper {
+            max-width: 1200px;
+        }
+
+        .aboutImgContainer  {
+            position: relative;
+            z-index: -1;
+        }
+
+        @media (max-width:767px) and (orientation:landscape),
+               (min-width: 576px) {
+            .aboutImgContainer  {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        @media (max-width:767px) and (orientation:landscape),
+               (min-width: 768px) and (max-width: 1199px) {
+            .aboutImgContainer  {
+                right: 5%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .aboutImgContainer  {
+                right: 10%;
+            }
+        }
+
+        .aboutImgContainer > img  {
+            width: 73%;
+        }
+
+        @media (min-width: 576px) {
+            .aboutImgContainer > img  {
+                width: 45%;
+            }
+        }
+
+        @media (max-width:767px) and (orientation:landscape),
+               (min-width: 992px) {
+            .aboutImgContainer > img  {
+                width: 33%;
+            }
+        }
+
+        .carouselContainer {
+            position: relative;
+        }
+
+        .carousel-inner {
+            height: 36.25rem;
+        }
+
+        @media (min-width: 400px) {
+            .carousel-inner {
+                height: 29.25rem;
+            }
+        }
+
+
+        .carousel-control-prev-icon {
+            background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        }
+
+        .carousel-control-next-icon {
+            background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
         }
 
         .carousel-fade .carousel-item {
@@ -453,59 +533,7 @@ li {
         	opacity: 1;
         }
 
-
-
-        #carouselAbout {
-          width: 100%;
-          height: 17.5rem;
-          margin-top: 7.5rem;
-        }
-
-        .aboutContainer,
-        .carousel-inner,
-        .carousel-item {
-          width: 100%;
-          height: 100%;
-        }
-
-        .carousel {
-          position: relative;
-          top: 0;
-          left: 0;
-        }
-
-        @media (min-width: 375px)  {
-
-            .carousel {
-                position: absolute;
-             }
-
-        }
-
-        @media screen and (orientation:landscape) and (max-height: 619px) {
-            .carousel {
-                position: relative !important;
-            }
-
-        }
-
-        .carousel-item {
-            background-color: transparent;
-            /*margin-top: 2rem;*/
-          }
-
-
-        .carousel-control-prev-icon {
-            background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-        }
-
-        .carousel-control-next-icon {
-            background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-        }
-
-
-        #firstSlide p:first-child,
-        #fifthSlide p:not(:first-child),
+        #fifthSlide p,
         #sixthSlide p,
         #seventhSlide p {
             font-family: "HollyHock-Regular";
@@ -514,127 +542,23 @@ li {
         }
 
         @media (min-width: 400px) {
-
-            #firstSlide p:first-child,
-            #fifthSlide p:not(:first-child),
-            #seventhSlide p,
-            #sixthSlide p {
-                font-size: 5.5rem;
+            #fifthSlide p,
+            #sixthSlide p,
+            #seventhSlide p {
+                font-family: "HollyHock-Regular";
+                font-size: 7rem;
                 line-height: 0.8;
             }
         }
 
-        @media (min-width: 576px) {
-
-                #firstSlide p:first-child,
-                #fifthSlide p:not(:first-child),
-                #seventhSlide p,
-                #sixthSlide p {
-                    font-size: 7rem;
-                    line-height: 0.8;
-                }
-        }
-
-        @media (min-width: 1110px) {
-            #firstSlide p:first-child,
-            #fifthSlide p:not(:first-child),
-            #sixthSlide p {
-                font-size: 7rem;
-            }
-        }
-
-
-        #firstSlide p:first-child {
-            text-align: center;
-        }
-
-
-        #seventhSlide p {
-            width: 11.25rem; /* 180/16 */
-            margin-right: 25%;
-            margin-left: auto;
-        }
-
-        @media (min-width: 400px) {
-            #seventhSlide p {
-                width: 13.25rem;
-                margin-right: 25%;
-                margin-left: auto;
-            }
-        }
-
-        @media (min-width: 1110px) {
-            #seventhSlide p {
-                font-size: 10rem;
-                width: 19.25rem;
-                line-height: 0.5;
-                margin-right: 28%;
-            }
-        }
 
         #seventhSlide em {
             font-family: "HollyHock-Regular";
-            font-size: 4.5rem;
+            font-size: 6rem;
             font-style: normal;
         }
 
-        @media (min-width: 400px) {
-            #seventhSlide em {
-                font-size: 4.5rem;
-            }
-        }
-
-        @media (min-width: 1110px) {
-            #seventhSlide em {
-                font-size: 6.5rem;
-            }
-        }
-
-        #aboutContainer > img:first-child {
-            position: fixed;
-            height: 40%;
-            bottom: 0;
-            opacity: 0.3;
-            z-index: -1;
-        }
-
-        @media (min-width: 768px) {
-            #aboutContainer > img:first-child {
-                height: 65%;
-                opacity: 1;
-            }
-        }
-
-        #aboutContainer > img:nth-child(2) {
-            position: fixed;
-            top: 80px;
-            right: 0;
-            height: 29%;
-            opacity: 0.3;
-            z-index: -1;
-        }
-
-        @media (min-width: 768px) {
-            #aboutContainer > img:nth-child(2) {
-                height: 41%;
-                opacity: 1;
-            }
-        }
-
-        #aboutContainer p {
-            margin-bottom: 0;
-        }
-
-        #aboutContainer strong {
-            font-size: 1.125rem;
-        }
-
-        @media (min-width: 1110px) {
-            #aboutContainer strong {
-                font-size: 1.25rem;
-            }
-        }
-/*......END #about .........................................................................................................................*/
+/*......END #aboutSection  .........................................................................................................................*/
 
 
 
@@ -656,7 +580,7 @@ li {
 
         @media (min-width: 992px) {
             .shoes {
-                padding: 3rem 7rem;
+                padding: 0 7rem 3rem 7rem;
             }
         }
 
@@ -665,14 +589,15 @@ li {
        }
 
        .shoesLink {
-           padding-top: 0.9375rem; /* 15/16 */
-           padding-bottom: 0.9375rem; /* 15/16 */
+           padding-top: 0.9375rem;
+           padding-bottom: 0.9375rem;
        }
 
        .shoesLink, .readMore > a {
-           font-family: "Hollyhock-Regular" !important;
+           /*font-family: "Hollyhock-Regular" !important;*/
            line-height: 0.5;
-           font-size: 5.25rem; /* 20/16 */
+           font-size: 1.5rem;
+           /*font-weight: 600;*/
        }
 
        .shoesLink, .readMore > a , .anchor figcaption {
@@ -733,7 +658,7 @@ li {
 
 
 
-/*......NOTE: START #contact ...............................................................................................................*/
+/*......NOTE: START #contactSection  ...............................................................................................................*/
 
         .adressContainer p {
             font-size: 1.125rem; /* 18/16 */
@@ -766,6 +691,8 @@ li {
             font-family: "Poiret One";
             font-size: 1rem;
         }
+
+
 
         ::-webkit-input-placeholder {
         	font-style: italic;
@@ -826,9 +753,10 @@ li {
         .form-control:focus  {
             border: 1px solid rgba(237, 157, 177, 0.5);
             background-color: transparent;
+            box-shadow: none;
         }
 
-/*......END #contact .......................................................................................................................*/
+/*......END #contactSection  .......................................................................................................................*/
 
 
 /*....................................................END LANDING PAGE SECTIONS.............................................................*/
@@ -961,7 +889,7 @@ li {
 
 /* NOTE: START PLACE-ORDER .................................................................................................................*/
 
-#place-order h2 {
+#place-order  h2 {
     padding-top: 3rem;
     font-size:  3rem;
 }
@@ -982,6 +910,12 @@ select option[disabled]:first-child {
 	display: none;
 }
 
+
+#place-order label ,#msg {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
 /* NOTE: END PLACE-ORDER ...................................................................................................................*/
 
 
@@ -989,16 +923,9 @@ select option[disabled]:first-child {
 
 /* NOTE: START MODAL........................................................................................................................*/
 
-.modal-open {
-    padding-right: 16px !important;
-}
-
-.modal-open #navbar {
-    padding-right: 32px !important;
-}
-
 .modal-header span {
-    font-size: 4.0625rem/* 65/16 */
+    font-size: 4.0625rem;/* 65/16 */
+    line-height: 0.7;
 }
 
 td {
@@ -1062,6 +989,29 @@ footer p {
     border-top: 1px solid rgba(0, 0, 0,0.15);
     -webkit-box-shadow: 0px -9px 40px rgba(0,0,0,0.15);
     box-shadow: 0px -9px 40px rgba(0,0,0,0.15);
+}
+
+.btn {
+    font-size: 1.25rem;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    font-family: 'Poiret One';
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+.btn:hover {
+    border: 1px solid rgba(237, 157, 177, 1);
+    color: rgba(237, 157, 177, 1);
+    cursor: pointer;
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
 }
 
 /* NOTE: END FOOTER.......................................................................................................................*/

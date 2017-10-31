@@ -1,6 +1,7 @@
 <?php
     $section = "place-order";
     $pageTitle = "Place an Order | La Bagguette de la Marrain";
+    $formAsset = "js/order-script.js";
     include "inc/header.php";
 ?>
         <main id="place-order" class="container">
@@ -10,42 +11,60 @@
                 </div>
             </div>
             <div class="row py-5">
-                <div class="container" id="form">
+                <p id="msg" class="col-12 col-lg-6 m-auto">If you think there is something I&rsquo;m missing, let me know! Complete the form to send me an email.</p>
+                <div class="container" id="form" class="pt-3">
                     <div class="row row justify-content-center">
-                        <div class="contact-form col-12 col-lg-8">
+                        <div class="contact-form col-12 col-lg-6">
                             <form role="form" action="form-assets/order.php" method="post" class="container px-0">
                                 <div class="row">
-                                    <div class="form-group group-name col-12">
-                                        <label class="sr-only" for="contact-name">Full Name</label>
-                                        <input type="text" name="name" placeholder="Full Name" class="contact-name form-control" id="contact-name">
+                                    <div class="form-group group-name col-6">
+                                        <label  for="firstName">First Name:</label>
+                                        <input type="text" name="firstName" placeholder="e.g. Jane" class="contact-name form-control" id="firstName">
+                                    </div>
+                                    <div class="form-group group-name col-6">
+                                        <label  for="lastName">Last Name:</label>
+                                        <input type="text" name="lastName" placeholder="e.g. Doe" class="contact-name form-control" id="lastName">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group group-email col-12">
-                                        <label class="sr-only" for="contact-email">Email</label>
-                                        <input type="text" name="email" placeholder="Email" class="contact-email form-control" id="contact-email">
+                                        <label for="contact-email">Email:</label>
+                                        <input type="text" name="email" placeholder="e.g. user@email.com" class="contact-email form-control" id="contact-email">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group group-productName col-6">
-                                        <label class="sr-only" for="contact-productName">Product Name</label>
+                                        <label for="contact-productName">Product Name:</label>
                                         <input type="text" name="productName" placeholder="Product Name" class="contact-productName form-control" id="contact-productName" value="<?php if(isset($_GET["product_name"]) && $_GET["product_name"]!="") { echo $_GET["product_name"];  } ?>">
                                     </div>
-                                    <div class="form-group group-size col-6">
-                                        <label class="sr-only" for="contact-size">Size</label>
-                                        <input type="text" name="size" placeholder="Size" class="contact-size form-control" id="contact-size">
+                                    <div class="form-group col-6">
+                                      <label for="inputState">State</label>
+                                      <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>35</option>
+                                        <option>35.5</option>
+                                        <option>36</option>
+                                        <option>36.5</option>
+                                        <option>37</option>
+                                        <option>37.5</option>
+                                        <option>38</option>
+                                        <option>38.5</option>
+                                        <option>39</option>
+                                        <option>39.5</option>
+                                        <option>40</option>
+                                      </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group group-message col-12">
-                                        <label class="sr-only" for="contact-message">Message</label>
-                                        <textarea rows="5" name="message" placeholder="Message" class="contact-message form-control" id="contact-message"></textarea>
+                                        <label for="contact-message">Message:</label>
+                                        <textarea rows="5" name="message" placeholder="e.g. Details,Colors,Textures" class="contact-message form-control" id="contact-message"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group group-antispam col-12">
-                                        <label for="contact-antispam">Antispam question: 7 + 5 = ?</label>
-                                        <input type="text" name="antispam" placeholder="Your answer" class="contact-antispam form-control" id="contact-antispam">
+                                    <div class="form-group group-trap col-12 sr-only">
+                                        <label for="address">Let this field emty</label>
+                                        <input type="text" name="address" class="form-control" id="address">
                                     </div>
                                 </div>
                                 <div class="row justify-content-around">
@@ -57,75 +76,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <div class="modal fade" id="sizeChart">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title">SIZE CHART</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table class="table">
-                            <thead class="thead-inverse table-bordered">
-                                <tr>
-                                  <th>USA</th>
-                                  <th>Europe</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>5</td>
-                                  <td>35</td>
-                                </tr>
-                                <tr>
-                                  <td>5.5</td>
-                                  <td>35.5</td>
-                                </tr>
-                                <tr>
-                                  <td>6</td>
-                                  <td>36</td>
-                                </tr>
-                                <tr>
-                                  <td>6.5</td>
-                                  <td>36.5</td>
-                                </tr>
-                                <tr>
-                                  <td>7</td>
-                                  <td>37</td>
-                                </tr>
-                                <tr>
-                                  <td>7.5</td>
-                                  <td>37.5</td>
-                                </tr>
-                                <tr>
-                                  <td>8</td>
-                                  <td>38</td>
-                                </tr>
-                                <tr>
-                                  <td>8.5</td>
-                                  <td>38.5</td>
-                                </tr>
-                                <tr>
-                                  <td>9</td>
-                                  <td>39</td>
-                                </tr>
-                                <tr>
-                                  <td>9.5</td>
-                                  <td>39.5</td>
-                                </tr>
-                                <tr>
-                                  <td>10</td>
-                                  <td>40</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
         </main>
 <?php
+    include "inc/modalSizeChart.php";
     include "inc/footer.php";
  ?>

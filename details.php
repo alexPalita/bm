@@ -16,22 +16,14 @@ if (!isset($item)) {
 
 $h1Title = $item["title"];
 $pageTitle = "$h1Title | La Bagguette de la Marraine";
-$section = null;
+$section = $item["title"];
 
 include "inc/header.php";
  ?>
-        <main class="container productContainer">
-            <div class="breadcrumbs">
-                <a href="catalog.php">Shoes</a>
-                &#124;
-                <a href="catalog.php?cat=<?php echo strtolower($item["category"]);?>">
-                <?php echo ucfirst($item["category"])?></a>
-                &#124;
-                <?php echo $item["title"]; ?>
-            </div>
+        <main class="container-fluid productContainer">
             <div class="wrapper row text-center">
-                <div class="preview shoesContainer col-12 col-md-6 mx-auto align-items-center">
-                    <div class="tab-content col-12 col-md-10 mx-auto">
+                <div class="preview shoesContainer col-12 col-lg-6 mx-auto align-items-center">
+                    <div class="tab-content col-12 col-lg-8 mx-auto">
                         <?php
                         $itemimg = $item["img"];
                         // $i = array_keys($itemimg);
@@ -43,7 +35,7 @@ include "inc/header.php";
                         ?>
                     </div>
                     <img src="img/bm/borderMiddle.svg" alt="" class="midBorderPreview">
-                    <ul class="nav nav-tabs col-12 col-lg-10 px-0 mx-auto" role="tablist">
+                    <ul class="nav nav-tabs col-12 col-lg-8 px-0 mx-auto justify-content-center" role="tablist">
                         <?php
                         foreach ($itemimg as $key) {
                         echo '<li class="nav-item">'
@@ -55,11 +47,13 @@ include "inc/header.php";
                         ?>
                     </ul>
                 </div>
-                <div class="details col-12 col-md-6 mb-5 mb-md-0">
-                    <div class="d-flex flex-row w-100 justify-content-center">
-                        <h1><?php echo $h1Title; ?></h1>
+                <div class="details col-12 col-lg-6 mb-5 mb-md-0  align-self-end">
+                    <div class=" d-flex flex-row justify-content-center sectionTitle">
+                        <img class="curlLeft align-self-end" alt="svg-curls" src="img/bm/leftArrow.svg">
+                            <h1 class="pb-4"><?php echo $h1Title?></h1>
+                        <img class="curlRight align-self-end" alt="svg-curls" src="img/bm/rightArrow.svg">
                     </div>
-                    <div class="d-flex flex-row my-5 productDetails">
+                    <div class="d-flex flex-row my-1 productDetails">
                         <div class="text-left my-5">
                             <h4 class="px-2"><strong>PRODUCT DETAILS:</strong></h4>
                             <p class="px-2 py-3 mb-0">
@@ -80,7 +74,7 @@ include "inc/header.php";
                     <div class="d-flex flex-row justify-content-around my-5 bottonsProductDetails">
                         <button type="button" class="btn"	data-toggle="modal" data-target="#sizeChart">Size Chart
                         </button>
-                        <a href="../../../place-order/" class="btn" role="button" aria-pressed="true">Place an Order</a>
+                        <a href="place-order.php?product_name=<?php echo rawurlencode($h1Title) ?>" class="btn" role="button" aria-pressed="true">Place an Order</a>
                     </div>
                 </div>
             </div>

@@ -16,12 +16,11 @@
     $pageTitle = "$h1Title | La Bagguette de la Marraine";
     include "inc/header.php";
 ?>
-    <main class="contentShoesPage container d-flex flex-column text-center px-0">
-        <div class="breadcrumbs"><?php
-            if($section != null){
-                    echo "<a href='catalog.php'>Shoes</a> &#124; ";
-                }
-                echo "<span>$h1Title</span>"; ?>
+    <main class="contentShoesPage container d-flex flex-column text-left px-0">
+        <div class=" d-flex flex-row justify-content-center sectionTitle">
+            <img class="curlLeft align-self-end" alt="svg-curls" src="img/bm/leftArrow.svg">
+                <h1 class="pb-4"><?php echo $h1Title?></h1>
+            <img class="curlRight align-self-end" alt="svg-curls" src="img/bm/rightArrow.svg">
         </div>
         <div class="shoesContainer container pb-5">
           <ul class="row">
@@ -32,6 +31,7 @@
                 }
                  ?>
             </ul>
+        </div>
     </main>
 <?php
     include "inc/footer.php";

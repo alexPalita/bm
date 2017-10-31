@@ -81,7 +81,7 @@ $catalog[103] = [
 
 $catalog[104] = [
     "code" => "NKP",
-    "title" => "Ella Pump",
+    "title" => "Kimberly Pump",
     "category" => "pumps",
     "thumb" => "img/thumbnails/kimberlyPump1.jpg",
     "img" => [

@@ -9,7 +9,7 @@
                 </div>
                 <div class="modal-body">
                     <table class="table">
-                        <thead class="thead-inverse table-bordered">
+                        <thead class="thead-dark table-bordered">
                             <tr>
                                 <th>USA</th>
                                 <th>Europe</th>
