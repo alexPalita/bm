@@ -34,7 +34,7 @@ include "inc/header.php";
                         }
                         ?>
                     </div>
-                    <img src="img/bm/borderMiddle.svg" alt="" class="midBorderPreview">
+                    <img src="/img/bm/borderMiddle.svg" alt="" class="midBorderPreview">
                     <ul class="nav nav-tabs col-12 col-lg-8 px-0 mx-auto justify-content-center" role="tablist">
                         <?php
                         foreach ($itemimg as $key) {
@@ -49,9 +49,9 @@ include "inc/header.php";
                 </div>
                 <div class="details col-12 col-lg-6 mb-5 mb-md-0  align-self-end">
                     <div class=" d-flex flex-row justify-content-center sectionTitle">
-                        <img class="curlLeft align-self-end" alt="svg-curls" src="img/bm/leftArrow.svg">
+                        <img class="curlLeft align-self-end" alt="svg-curls" src="/img/bm/leftArrow.svg">
                             <h1 class="pb-4"><?php echo $h1Title?></h1>
-                        <img class="curlRight align-self-end" alt="svg-curls" src="img/bm/rightArrow.svg">
+                        <img class="curlRight align-self-end" alt="svg-curls" src="/img/bm/rightArrow.svg">
                     </div>
                     <div class="d-flex flex-row my-1 productDetails">
                         <div class="text-left my-5">
@@ -74,7 +74,7 @@ include "inc/header.php";
                     <div class="d-flex flex-row justify-content-around my-5 bottonsProductDetails">
                         <button type="button" class="btn"	data-toggle="modal" data-target="#sizeChart">Size Chart
                         </button>
-                        <a href="place-order.php?product_name=<?php echo rawurlencode($h1Title) ?>" class="btn" role="button" aria-pressed="true">Place an Order</a>
+                        <a href="/place-order.php?product_name=<?php echo str_replace(" ","-",$h1Title) ?>" class="btn" role="button" aria-pressed="true">Place an Order</a>
                     </div>
                 </div>
             </div>

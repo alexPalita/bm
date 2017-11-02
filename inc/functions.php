@@ -1,16 +1,19 @@
 <?php
 function get_item_html ($id,$item) {
+    $title = str_replace(" ","-",$item['title']);
+    // $title = rawurlencode($title);
+    $category = $item['category'];
     $output = "\n"
-            ."\t\t\t\t<li class='col-6 col-lg-3 pt-3 pt-md-5 pumps'>\n"
-            ."\t\t\t\t\t<img src='img/bm/borderTop.svg' alt='Ornament' >\n"
-            ."\t\t\t\t\t<a class='anchor' href='details.php?id=".$id."&category=".$item['category']."'>\n"
-            ."\t\t\t\t\t\t<figure  class='figContainer'>\n"
-            ."\t\t\t\t\t\t\t<img src='".$item["thumb"]."' alt='".$item["title"]."'>\n"
-            ."\t\t\t\t\t\t\t<figcaption class='text-center'>".$item["title"]."</figcaption>\n"
-            ."\t\t\t\t\t\t</figure>\n"
-            ."\t\t\t\t\t</a>\n"
-            ."\t\t\t\t\t<img src='../img/bm/borderBottom.svg' alt='Ornament'>\n"
-            ."\t\t\t\t</li>\n";
+            ."<li class='col-6 col-lg-3 pt-3 pt-md-5 pumps'>\n"
+            ."<img src='/img/bm/borderTop.svg' alt='Ornament' >\n"
+            ."<a class='anchor' href='".$category."/".$id."/".$title."'>\n"
+            ."<figure  class='figContainer'>\n"
+            ."<img src='".$item["thumb"]."' alt='".$item["title"]."'>\n"
+            ."<figcaption class='text-center'>".$item["title"]."</figcaption>\n"
+            ."</figure>\n"
+            ."</a>\n"
+            ."<img src='/img/bm/borderBottom.svg' alt='Ornament'>\n"
+            ."</li>\n";
     return $output;
 }
 

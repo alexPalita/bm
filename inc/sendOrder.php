@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim(filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING));
     $email = trim(filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL));
     $productName = trim(filter_input(INPUT_POST,"productName",FILTER_SANITIZE_STRING));
-    $size = trim(filter_input(INPUT_POST,"size",FILTER_SANITIZE_STRING));
+    $size = trim(filter_input(INPUT_POST,"size",FILTER_SANITIZE_NUMBER_FLOAT));
     $details = trim(filter_input(INPUT_POST,"details",FILTER_SANITIZE_SPECIAL_CHARS));
     $height = trim(filter_input(INPUT_POST,"height",FILTER_SANITIZE_STRING));
 
