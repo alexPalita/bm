@@ -911,9 +911,30 @@ select option[disabled]:first-child {
 }
 
 
-#place-order label ,#msg {
+#place-order label ,#initialMsg {
     font-size: 1.125rem;
     font-weight: 600;
+}
+
+#messageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+
+#msg {
+    top:0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: transform 0.2s ease 0s;
+    transition: transform 0.2s ease 0s;
+}
+
+#msg.slideDown {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
 }
 
 /* NOTE: END PLACE-ORDER ...................................................................................................................*/

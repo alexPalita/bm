@@ -2,6 +2,8 @@
     $section = null;
     $pageTitle = "La Baguette de la Marraine";
     include "inc/header.php";
+    $formAsset = "js/mailScript.js";
+
 ?>
     <main class="contentLandingPage">
         <section id="home" class="container-fluid homeContainer">
@@ -152,39 +154,45 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 contact-form px-0">
-                                    <form role="form" action="form-assets/contact.php" method="post" class="container px-0">
+                                    <form role="form"  id="sendMailForm" method="post" class="container px-0">
                                         <div class="row">
                                             <div class="form-group group-name col-6">
-                                                <label class="sr-only" for="contact-name">Full Name</label>
-                                                <input type="text" name="name" placeholder="Full Name" class="contact-name form-control" id="contact-name">
+                                                <label class="sr-only" for="name">Full Name</label>
+                                                <input type="text" name="name" placeholder="Full Name" class="contact-name form-control" id="name" value="<?php if (isset($name)) { echo $name;}?>">
                                             </div>
                                             <div class="form-group  group-subject col-6">
-                                                <label class="sr-only" for="contact-subject">Subject</label>
-                                                <input type="text" name="subject" placeholder="Subject" class="contact-subject form-control" id="contact-subject">
+                                                <label class="sr-only" for="subject">Subject</label>
+                                                <input type="text" name="subject" placeholder="Subject" class="contact-subject form-control" id="subject" value="<?php if (isset($subject)) { echo $subject;}?>">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group group-email col-12">
-                                                <label class="sr-only" for="contact-email">Email</label>
-                                                <input type="text" name="email" placeholder="Email" class="contact-email form-control" id="contact-email">
+                                                <label class="sr-only" for="email">Email</label>
+                                                <input type="text" name="email" placeholder="Email" class="contact-email form-control" id="email" value="<?php if (isset($email)) { echo $email;}?>">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group group-message col-12">
-                                                <label class="sr-only" for="contact-message">Message</label>
-                                                <textarea rows="5" name="message" placeholder="Message" class="contact-message form-control" id="contact-message"></textarea>
+                                                <label class="sr-only" for="message">Message</label>
+                                                <textarea rows="5" name="message" placeholder="Message" class="contact-message form-control" id="message" value="<?php if (isset($message)) { echo $message;}?>" ></textarea>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="form-group group-antispam col-12">
-                                                <label for="contact-antispam">Antispam question: 7 + 5 = ?</label>
-                                                <input type="text" name="antispam" placeholder="Your answer" class="contact-antispam form-control" id="contact-antispam">
+                                            <div class="form-group group-trap col-12 sr-only">
+                                                <label for="height">Let this field emty</label>
+                                                <input type="text" name="height" class="form-control" id="height">
                                             </div>
                                         </div>
                                         <div class="row justify-content-center">
-                                            <button type="submit" class="btn">Send message</button>
+                                            <button type="submit" class="btn" id="submit-btn">Send message</button>
                                         </div>
                                     </form>
+                                    <div id="messageContainer" class="col-12 px-0 py-5">
+                                        <div id="msg" class="alert w-100" role="alert">
+                                            <h4 class="alert-heading"></h4>
+                                            <p><strong></strong></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
