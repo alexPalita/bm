@@ -12,11 +12,11 @@ $addRoot = function() use ($section) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php echo $pageTitle ?></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="/js/animsition-master/dist/css/animsition.min.css">
     <link rel="stylesheet" href="/fonts/MyFontsWebfontsKit/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/b.css">
+    <link rel="stylesheet" href="/js/animsition-master/dist/css/animsition.min.css">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
     <script>
     document.createElement( "picture" );

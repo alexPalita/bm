@@ -1,15 +1,15 @@
 <?php
-    $section = "place-order";
-    $pageTitle = "Place an Order | La Bagguette de la Marraine";
-    $formAsset = "js/orderScript.js";
     $product = "";
     if(isset($_GET["product_name"])) {
          $product = str_replace("-"," ",$_GET["product_name"]);
      }
+     $section = "place-order";
+     $pageTitle = "Place an Order | La Bagguette de la Marraine";
+     $formAsset = "order";
 
     include "inc/header.php";
 ?>
-        <main id="place-order" class="container animsition">
+        <main id="place-order" class="container animsition" >
             <div class="row">
                 <div class=" d-flex flex-row w-100 justify-content-center">
                     <h2>PLACE AN ORDER</h2>

@@ -17,6 +17,7 @@ if (!isset($item)) {
 $h1Title = $item["title"];
 $pageTitle = "$h1Title | La Bagguette de la Marraine";
 $section = $item["title"];
+$formAsset = null;
 
 include "inc/header.php";
  ?>

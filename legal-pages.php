@@ -1,9 +1,10 @@
 <?php
     $section = 'legal-pages';
     $pageTitle = "Legal Pages | La Baguette de la Marraine";
+    $formAsset = null;
     include "inc/header.php";
  ?>
-        <main id="legalPages" class="container animsition">
+        <main id="legalPages" class="container animsition" >
             <section id="shipping-returns" class="legalSection">
                 <div class="d-flex flex-row w-100 justify-content-center">
                     <h1>Shipping &amp; Returns</h1>
