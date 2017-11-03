@@ -1,11 +1,11 @@
 <?php
     $section = null;
     $pageTitle = "La Baguette de la Marraine";
-    include "inc/header.php";
     $formAsset = "js/mailScript.js";
+    include "inc/header.php";
 
 ?>
-    <main class="contentLandingPage">
+    <main class="contentLandingPage animsition" >
         <section id="home" class="container-fluid homeContainer">
             <div class="d-flex">
                 <picture class="m-auto">
@@ -107,7 +107,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 shoes">
                         <img src="img/bm/borderTop.svg" alt="" class="tBorder">
-                            <a href="shoes/#pumps" class="shoesImgContainer">
+                            <a href="/pumps" class="shoesImgContainer">
                                 <figure class="pumpsA">
                                     <img src="img/bm/pumps.svg" alt="Pumps Sketch" id="pumpsSketch">
                                     <figcaption class="shoesLink text-center">PUMPS</figcaption>
@@ -118,7 +118,7 @@
                     <img src="img/bm/borderMiddle.svg" alt="" class="col-12 midBorder">
                     <div class="col-12 col-sm-6 shoes">
                         <img src="img/bm/borderTop.svg" alt="" class="tBorder">
-                        <a href="shoes/#sandals" class="shoesImgContainer">
+                        <a href="/sandals" class="shoesImgContainer">
                             <figure  class="sandalsA">
                                 <img src="img/bm/sandals.svg" alt="Sandals Sketch" id="sandalsSketch">
                                 <figcaption class="shoesLink text-center">SANDALS</figcaption>

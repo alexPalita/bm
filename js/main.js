@@ -1,25 +1,31 @@
-
 $(function() {
+    $(".animsition").animsition({
+        inClass: 'fade-in',
+        outClass: 'fade-out',
+        inDuration: 1000,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'main', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        // loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: true,
+        timeoutCountdown: 600,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        // overlay : false,
+        // overlayClass : 'animsition-overlay-slide',
+        // overlayParentElement : 'body',
+        // transition: function(url){ window.location.href = url; }
+
+    });
+
+
     var $href = $('#navContainer a[href="#home"],#navContainer a[href="#contact"],#navContainer a[href="#about"]');
-    // $href.on('click', function(event) {
-    //   if (this.hash !== "") {
-    //     event.preventDefault();
-    //     var hash = this.hash;
-    //     $('html, body').animate({
-    //       scrollTop: $(hash).offset().top
-    //     }, 600, function(){
-    //       window.location.hash = hash;
-    //     });
-    //   }
-    // });
-
-
-    // Select all links with hashes
-// $('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  // .not('[href="#"]')
-  // .not('[href="#0"]')
-  $href.click(function(event) {
+    $href.click(function(event) {
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
@@ -49,13 +55,13 @@ $(function() {
         });
       }
     }
-  });
+    });
 
 
-      var $firstTabPane = $('.tab-content div:first-child');
-      if (!$firstTabPane.hasClass('active')) {
-          $firstTabPane.addClass('active');
-      }
+    var $firstTabPane = $('.tab-content div:first-child');
+    if (!$firstTabPane.hasClass('active')) {
+        $firstTabPane.addClass('active');
+    }
 
 
     var $navContainer = $('#navContainer');

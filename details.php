@@ -20,7 +20,7 @@ $section = $item["title"];
 
 include "inc/header.php";
  ?>
-        <main class="container-fluid productContainer">
+        <main class="container-fluid productContainer animsition">
             <div class="wrapper row text-center">
                 <div class="preview shoesContainer col-12 col-lg-6 mx-auto align-items-center">
                     <div class="tab-content col-12 col-lg-8 mx-auto">
@@ -74,7 +74,7 @@ include "inc/header.php";
                     <div class="d-flex flex-row justify-content-around my-5 bottonsProductDetails">
                         <button type="button" class="btn"	data-toggle="modal" data-target="#sizeChart">Size Chart
                         </button>
-                        <a href="/place-order.php?product_name=<?php echo str_replace(" ","-",$h1Title) ?>" class="btn" role="button" aria-pressed="true">Place an Order</a>
+                        <a href="/place-order/<?php echo str_replace(" ","-",$h1Title) ?>" class="btn" role="button" aria-pressed="true">Place an Order</a>
                     </div>
                 </div>
             </div>

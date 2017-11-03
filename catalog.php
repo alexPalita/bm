@@ -16,7 +16,7 @@
     $pageTitle = "$h1Title | La Bagguette de la Marraine";
     include "inc/header.php";
 ?>
-    <main class="contentShoesPage container d-flex flex-column text-left px-0">
+    <main class="contentShoesPage container d-flex flex-column text-left px-0 animsition">
         <div class=" d-flex flex-row justify-content-center sectionTitle">
             <img class="curlLeft align-self-end" alt="svg-curls" src="img/bm/leftArrow.svg">
                 <h1 class="pb-4"><?php echo $h1Title?></h1>

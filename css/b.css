@@ -333,7 +333,12 @@ li {
 .contentLandingPage {
     z-index: 1;
     /*overflow: hidden;*/
+    /*position: relative;
+    opacity: 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;*/
 }
+
 
 @media (min-width: 576px) {
 
@@ -352,6 +357,7 @@ li {
             overflow: hidden;
             height:  100vh;
             z-index: -2;
+
         }
 
         #home > picture {
