@@ -1,6 +1,11 @@
 <?php
     include "inc/items.php";
     include "inc/functions.php";
+    $h1Title = "Shoes";
+    $section = null;
+    $formAsset = null;
+    $pageTitle = "$h1Title | La Bagguette de la Marraine";
+
     if (isset($_GET["cat"])) {
         if ($_GET["cat"] == "pumps") {
             $h1Title = "Pumps";
@@ -10,10 +15,6 @@
             $section = "sandals";
         }
     }
-    $h1Title = "Shoes";
-    $section = null;
-    $formAsset = null;
-    $pageTitle = "$h1Title | La Bagguette de la Marraine";
     include "inc/header.php";
 ?>
     <main class="contentShoesPage container d-flex flex-column text-left px-0 animsition">
