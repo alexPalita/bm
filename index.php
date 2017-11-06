@@ -1,7 +1,7 @@
 <?php
     $section = null;
     $pageTitle = "La Baguette de la Marraine";
-    $formAsset = "mail";
+    $jsAsset = "mail";
     include "inc/header.php";
 
 ?>

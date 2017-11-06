@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
         console.log($postdata)
         $.ajax({
             type:'POST',
-            url:'inc/sendOrder.php',
+            url:'/inc/sendOrder.php',
             data: $postdata,
             dataType:'json',
             beforeSend: function(xhr){

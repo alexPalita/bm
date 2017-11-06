@@ -1,7 +1,7 @@
 <?php
     $section = 'legal-pages';
     $pageTitle = "Legal Pages | La Baguette de la Marraine";
-    $formAsset = null;
+    $jsAsset = null;
     include "inc/header.php";
  ?>
         <main id="legalPages" class="container animsition" >

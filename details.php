@@ -17,7 +17,7 @@ if (!isset($item)) {
 $h1Title = $item["title"];
 $pageTitle = "$h1Title | La Bagguette de la Marraine";
 $section = $item["title"];
-$formAsset = null;
+$jsAsset = null;
 
 include "inc/header.php";
  ?>
@@ -29,8 +29,10 @@ include "inc/header.php";
                         $itemimg = $item["img"];
                         // $i = array_keys($itemimg);
                         foreach ($itemimg as $key) {
-                        echo '<div class="tab-pane" id='.$key["picIds"].' role="tabpanel">'
-                            .'<img alt="Pumps" src="'.$key["url"].'" >'
+                        echo '<div class="tab-pane" id='.$key["picIds"].' role="tabpanel" >'
+                            .'<a href="'.$key["url"].'">'
+                            .'<img class="toEnlarge" alt="Pumps" src="'.$key["url"].'" >'
+                            .'</a>'
                             .'</div>';
                         }
                         ?>
@@ -80,6 +82,21 @@ include "inc/header.php";
                 </div>
             </div>
         </main>
+        <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"><?php echo $h1Title?></h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="" class="enlargeImageModalSource">
+                    </div>
+                </div>
+            </div>
+        </div>
 <?php
 include "inc/modalSizeChart.php";
 include "inc/footer.php";

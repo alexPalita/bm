@@ -1,11 +1,11 @@
 <?php
-    $product = "";
+    $productName = "";
     if(isset($_GET["product_name"])) {
-         $product = str_replace("-"," ",$_GET["product_name"]);
+         $productName = str_replace("-"," ",$_GET["product_name"]);
      }
      $section = "place-order";
      $pageTitle = "Place an Order | La Bagguette de la Marraine";
-     $formAsset = "order";
+     $jsAsset = "order";
 
     include "inc/header.php";
 ?>
@@ -34,7 +34,7 @@
                                 <div class="row">
                                     <div class="form-group group-productName col-8 col-sm-6">
                                         <label for="productName">Product Name:</label>
-                                        <input type="text" name="productName" placeholder="Product Name" class="contact-productName form-control" id="productName" value="<?php echo $product;?>" >
+                                        <input type="text" name="productName" placeholder="Product Name" class="contact-productName form-control" id="productName" value="<?php if (isset($productName)) { echo $productName;}?>">
                                     </div>
                                     <div class="form-group col-4 col-sm-6">
                                       <label for="size">Size</label>

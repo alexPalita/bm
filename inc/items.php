@@ -183,11 +183,14 @@ $catalog[108] = [
     "thumb" => "/img/thumbnails/sanglePump1.jpg",
     "img" => [
                  [  "picIds" => "sangle1",
-                     "url" => "/img/shoes/pumps/sangle/sangle1.jpg"
+                     "url" => "/img/shoes/pumps/sangle/sanglePump1.jpg"
                     ],
                  [  "picIds" => "sangle2",
-                     "url" => "/img/shoes/pumps/sangle/sangle2.jpg"
+                     "url" => "/img/shoes/pumps/sangle/sanglePump2.jpg"
                     ],
+                 [  "picIds" => "sangle3",
+                     "url" => "/img/shoes/pumps/sangle/sanglePump3.jpg"
+                    ]
             ],
     "details" => "Slip on",
     "heelHeight" => 3.5,

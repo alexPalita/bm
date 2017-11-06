@@ -22,7 +22,7 @@
 <script src="/js/animsition-master/dist/js/animsition.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <?php
-switch ($formAsset) {
+switch ($jsAsset) {
     case 'order':
         echo '<script type="text/javascript" src="/js/orderScript.js"></script>';
         break;
@@ -30,6 +30,11 @@ switch ($formAsset) {
     case 'mail':
         echo '<script type="text/javascript" src="/js/mailScript.js"></script>';
         break;
+
+    // case 'easyZoom':
+    //     echo '<script type="text/javascript" src="/js/EasyZoom-master/dist/easyzoom.js"></script>';
+    //     echo '<script type="text/javascript"> var $easyzoom = $(".easyzoom").easyZoom(); </script>';
+    //     break;
 
     default:
         echo '';

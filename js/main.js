@@ -86,4 +86,24 @@ $(function() {
         }
     });
 
+    $('.tab-pane .toEnlarge').on('click', function(ev) {
+        if (($(window).width() < 769) && (window.matchMedia("(orientation: portrait)").matches)) {
+            ev.preventDefault();
+            console.log("CACAT");
+        }
+        else {
+            ev.preventDefault();
+            $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+            $('#enlargeImageModal').modal('show');
+        }
+    });
+
+    if (window.matchMedia("(orientation: portrait)").matches) {
+       console.log("you're in PORTRAIT mode");
+    }
+
+    if (window.matchMedia("(orientation: landscape)").matches) {
+       console.log("you're in LANDSCAPE mode");
+    }
+
 });

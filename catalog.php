@@ -3,7 +3,7 @@
     include "inc/functions.php";
     $h1Title = "Shoes";
     $section = null;
-    $formAsset = null;
+    $jsAsset = null;
     $pageTitle = "$h1Title | La Bagguette de la Marraine";
 
     if (isset($_GET["cat"])) {
