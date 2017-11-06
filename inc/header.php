@@ -13,7 +13,7 @@ $addRoot = function() use ($section) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php echo $pageTitle ?></title>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="/fonts/MyFontsWebfontsKit/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/Hollyhock-Regular/Hollyhock-Regular.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/b.css">
     <link rel="stylesheet" href="/js/animsition-master/dist/css/animsition.min.css">

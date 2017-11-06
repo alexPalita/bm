@@ -116,11 +116,18 @@ h2 {
 
 
 #navbar {
-    -webkit-box-shadow: 5px 10px 40px rgba(0,0,0,0.15);
-    box-shadow: 5px 10px 40px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0.3125em 0.625em 2.5em rgba(0,0,0,0.15); /* 5/16 */ /* 10/16 */ /* 40/16 */
+    box-shadow: 0.3125em 0.625em 2.5em rgba(0,0,0,0.15); /* 5/16 */ /* 10/16 */ /* 40/16 */
     background-color: rgba(255, 255, 255, 1);
     width: 100%;
     z-index: 100;
+}
+
+@media (min-width: 992px) {
+    #navbar {
+        height: 5rem;
+    }
+
 }
 
 ul {
