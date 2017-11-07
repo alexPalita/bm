@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productName = trim(filter_input(INPUT_POST,"productName",FILTER_SANITIZE_STRING));
     $size = trim(filter_input(INPUT_POST,"size",FILTER_SANITIZE_NUMBER_FLOAT));
     $details = trim(filter_input(INPUT_POST,"details",FILTER_SANITIZE_SPECIAL_CHARS));
+    $checkTerms = trim(filter_input(INPUT_POST,"checkTerms",FILTER_SANITIZE_NUMBER_FLOAT));
     $height = trim(filter_input(INPUT_POST,"height",FILTER_SANITIZE_STRING));
 
 
@@ -18,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message['email']='';
     $message['productName']='';
     $message['size']='';
+    $message['checkTerms']='';
     $message['success']='';
     $message['error']='';
 
@@ -26,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $selector['name'] = '';
     $selector['email'] = '';
     $selector['productName'] = '';
+    $selector['checkTerms']='';
     $selector['size'] = '';
 
     if ($name == null) {
@@ -49,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $selector['size']='#size';
     }
 
+
     if (!isset($signal) && $_POST["height"] != "") {
         $signal = 'badRobot';
         $message = "Robotized Input";
@@ -60,11 +64,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $selector['email']='#email';
     }
 
+    if (!isset($signal) && !$checkTerms) {
+        $signal = 'badCheck';
+        $message['checkTerms'] = 'Please agree with the Terms and Conditions';
+        $selector['checkTerms']='#checkTerms';
+    }
+
     if (!isset($signal) && ($name != null || $email != null || $productName != null || $size != null) ) {
 
             $email_body = "";
-            $email_body .= "Sender e-mail: ".$email."\n";
             $email_body .= "Sender Name: ".$name."\n\n";
+            $email_body .= "Sender e-mail: ".$email."\n\n";
             $email_body .= "Product Name: ".$productName ."\n";
             $email_body .= "Product Size: ". $size . "\n\n";
             $email_body .= "Details: " . $details;

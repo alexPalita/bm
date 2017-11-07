@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($signal) && ($name != null || $subject != null || $email != null) ) {
 
             $email_body = "";
-            $email_body .= "Sender e-mail: ".$email."\n";
             $email_body .= "Sender Name: ".$name."\n\n";
+            $email_body .= "Sender e-mail: ".$email."\n\n";
             $email_body .= "Subject: ".$subject ."\n";
             $email_body .= "Message: " . $emailMessage;
 

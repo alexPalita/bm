@@ -59,8 +59,8 @@ $(function() {
 
 
     var $firstTabPane = $('.tab-content div:first-child');
-    if (!$firstTabPane.hasClass('active')) {
-        $firstTabPane.addClass('active');
+    if (!$firstTabPane.hasClass('active show')) {
+        $firstTabPane.addClass('active show');
     }
 
 

@@ -29,7 +29,7 @@ include "inc/header.php";
                         $itemimg = $item["img"];
                         // $i = array_keys($itemimg);
                         foreach ($itemimg as $key) {
-                        echo '<div class="tab-pane" id='.$key["picIds"].' role="tabpanel" >'
+                        echo '<div class="tab-pane fade" id='.$key["picIds"].' role="tabpanel" >'
                             .'<a href="'.$key["url"].'">'
                             .'<img class="toEnlarge" alt="Pumps" src="'.$key["url"].'" >'
                             .'</a>'

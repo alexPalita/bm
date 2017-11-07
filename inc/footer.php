@@ -3,13 +3,13 @@
     <div class="legal collapse" id="legalNav">
         <ul class="d-flex flex-column flex-md-row justify-content-center text-center ">
             <li class="p-4">
-                <a href="/legal-pages/#shipping-returns" class="p-4">Shipping&amp;Returns</a>
+                <a href="/legal-pages#shipping-returns" class="p-4">Shipping&amp;Returns</a>
             </li>
             <li class="p-4">
-                <a href="/legal-pages/#privacy-policy" class="p-4">Privacy Policy</a>
+                <a href="/legal-pages#privacy-policy" class="p-4">Privacy Policy</a>
             </li>
             <li class="p-4">
-                <a href="/legal-pages/#terms-and-conditions" class="p-4">Terms and Conditions</a>
+                <a href="/legal-pages#terms-and-conditions" class="p-4">Terms and Conditions</a>
             </li>
         </ul>
         <p class="m-0 p-4 text-center" >&copy;<?php echo date("Y") ?> Baguette Marraine . All rights reserved</p>

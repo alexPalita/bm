@@ -13,6 +13,29 @@ $addRoot = function() use ($section) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php echo $pageTitle ?></title>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin-ext" rel="stylesheet">
+    <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 3451899, 2017-09-15T11:25:30-0400
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: Hollyhock-Regular by Angie Makes
+     * URL: https://www.myfonts.com/fonts/fonted-house/hollyhock/regular/
+     * Copyright: Copyright (c) 2014 by Angie Makes. All rights reserved.
+     * Licensed pageviews: 1,010,000
+     *
+     *
+     * License: https://www.myfonts.com/viewlicense?type=web&buildid=3451899
+     *
+     * © 2017 MyFonts Inc
+    */
+
+    -->
     <link rel="stylesheet" type="text/css" href="/fonts/Hollyhock-Regular/Hollyhock-Regular.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/b.css">

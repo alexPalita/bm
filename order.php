@@ -16,12 +16,12 @@
                 </div>
             </div>
             <div class="row pt-4 pb-5  justify-content-center">
-                <p id="initialMsg" class="col-12 col-lg-6">If you think there is something missing, let us know! Complete the form to send us an email.</p>
+                <p id="initialMsg" class="col-12 col-lg-6 text-center" >Please complete all the fields below to send us an Order.</p>
                 <div class="container pt-4" id="form" >
                     <div class="row row justify-content-center">
                         <div class="contact-form col-12 col-lg-6">
                             <form role="form"  method="post" id="placeOrderForm" class="container px-0">
-                                <div class="row">
+                                <div class="form-row">
                                     <div class="form-group group-name col-12 col-sm-6">
                                         <label  for="name">Full Name:</label>
                                         <input type="text" name="name" placeholder="e.g. Jane Doe" class="contact-name form-control" id="name" value="<?php if (isset($name)) { echo $name;}?>">
@@ -31,7 +31,7 @@
                                         <input type="text" name="email" placeholder="e.g. user@email.com" class="contact-email form-control" id="email" value="<?php if (isset($email)) { echo $email;}?>" >
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="form-row">
                                     <div class="form-group group-productName col-8 col-sm-6">
                                         <label for="productName">Product Name:</label>
                                         <input type="text" name="productName" placeholder="Product Name" class="contact-productName form-control" id="productName" value="<?php if (isset($productName)) { echo $productName;}?>">
@@ -65,22 +65,33 @@
                                       </select>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="form-row">
                                     <div class="form-group group-message col-12">
                                         <label for="details">Other Details:</label>
                                         <textarea rows="5" name="details" placeholder="e.g. Details,Colors,Textures" class="contact-message form-control" id="details"></textarea>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="form-row">
+                                    <div class="form-group px-3">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="checkTerms" id="checkTerms" value="1">
+                                                <p>I have read and agree to the <a href="/legal-pages#terms-and-conditions" target="_blank">Terms and Conditions</a>.</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group group-trap col-12 sr-only">
                                         <label for="height">Let this field emty</label>
                                         <input type="text" name="height" class="form-control" id="height">
                                     </div>
                                 </div>
-                                <div class="row justify-content-around">
+                                <div class="form-row justify-content-around">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#sizeChart">Size Chart</button>
                                     <button type="submit" class="btn" id="submit-btn">Send message</button>
                                 </div>
+
                             </form>
                         </div>
                     </div>

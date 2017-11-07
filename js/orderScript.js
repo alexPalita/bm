@@ -39,6 +39,7 @@ jQuery(document).ready(function() {
                         $($inputValidator).addClass("is-invalid");
                     }
 
+
                     if (response['signal'] == 'badEmail'){
                         $("#msg").removeClass('alert-success');
                         $("#msg").addClass('alert-danger slideDown');
@@ -47,6 +48,16 @@ jQuery(document).ready(function() {
                         // $("input[name='firstName']").addClass("invalid");
                         console.log('response badEmail...');
                     }
+                    
+                    if (response['signal'] == 'badCheck'){
+                        $("#msg").removeClass('alert-success');
+                        $("#msg").addClass('alert-danger slideDown');
+                        $("#msg .alert-heading").text('Oops!');
+                        $("#msg > p").text(response['msg']);
+                        // $("input[name='firstName']").addClass("invalid");
+                        console.log('response badEmail...');
+                    }
+
                     if (response['signal'] == 'badRobot'){
                         $("#msg").removeClass('alert-success');
                         $("#msg").addClass('alert-danger slideDown');
