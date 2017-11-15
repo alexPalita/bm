@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim(filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING));
     $email = trim(filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL));
     $productName = trim(filter_input(INPUT_POST,"productName",FILTER_SANITIZE_STRING));
-    $size = trim(filter_input(INPUT_POST,"size",FILTER_SANITIZE_NUMBER_FLOAT));
+    $size = filter_input( INPUT_POST, 'size', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $details = trim(filter_input(INPUT_POST,"details",FILTER_SANITIZE_SPECIAL_CHARS));
     $checkTerms = trim(filter_input(INPUT_POST,"checkTerms",FILTER_SANITIZE_NUMBER_FLOAT));
     $height = trim(filter_input(INPUT_POST,"height",FILTER_SANITIZE_STRING));
@@ -51,7 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message['size'] = 'Size';
         $selector['size']='#size';
     }
-
+    if ($details == null) {
+        $details = " ";
+    }
 
     if (!isset($signal) && $_POST["height"] != "") {
         $signal = 'badRobot';
@@ -74,23 +76,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $email_body = "";
             $email_body .= "Sender Name: ".$name."\n\n";
-            $email_body .= "Sender e-mail: ".$email."\n\n";
             $email_body .= "Product Name: ".$productName ."\n";
             $email_body .= "Product Size: ". $size . "\n\n";
             $email_body .= "Details: " . $details;
 
-            $mail->setFrom('site@baguettemarraine.shoes');
-            $mail->addAddress('dev.ign.codes@gmail.com', 'Alex P.');     // Add a recipient
+            $mail->setFrom($email);
+            $mail->addAddress('orders@baguettemarraine.shoes', 'Iuliana Nita');     // Add a recipient
             $mail->addReplyTo($email,$name);
             $mail->isHTML(false);                                  // Set email format to HTML
 
-            $mail->Subject = "BM-Order From: ".$name;
+            $mail->Subject = $name." ordered - ".$productName;
             $mail->Body    = $email_body;
 
             if(!$mail->send()) {
                 $signal = 'bad';
-                $message  = 'Message could not be sent.';
-                $message .= 'Mailer Error: ' . $mail->ErrorInfo;
+                $message['error'] = $mail->ErrorInfo;
             } else {
                 $signal = 'ok';
                 $message['success'] = 'Thank you for choosing us! We will get back to you very soon.';

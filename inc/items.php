@@ -26,33 +26,28 @@ $catalog[101] = [
     "colorAvailable" => true
 ];
 
-
 $catalog[102] = [
-    "code" => "5BDH",
-    "title" => "Diamond Heel Pump",
+    "code" => "5EPG",
+    "title" => "Etoile Pump",
     "category" => "pumps",
-    "thumb" => "/img/thumbnails/diamondHeelPump1.jpg",
+    "thumb" => "/img/thumbnails/etoilePump1.jpg",
     "img" => [
-                 [  "picIds" => "diamondHeel1",
-                     "url" => "/img/shoes/pumps/diamondHeel/diamondHeelPump1.jpg"
+                 [  "picIds" => "etoilePump1",
+                     "url" => "/img/shoes/pumps/etoile/etoilePump1.jpg"
                     ],
-                 [  "picIds" => "diamondHeel2",
-                     "url" => "/img/shoes/pumps/diamondHeel/diamondHeelPump2.jpg"
+                 [  "picIds" => "etoilePump2",
+                     "url" => "/img/shoes/pumps/etoile/etoilePump2.jpg"
                     ],
-                 [  "picIds" => "diamondHeel3",
-                     "url" => "/img/shoes/pumps/diamondHeel/diamondHeelPump3.jpg"
-                    ],
-                 [  "picIds" => "diamondHeel4",
-                     "url" => "/img/shoes/pumps/diamondHeel/diamondHeelPump4.jpg"
+                 [  "picIds" => "etoilePump3",
+                     "url" => "/img/shoes/pumps/etoile/etoilePump3.jpg"
                     ],
             ],
     "details" => "High Heel Pump",
-    "heelHeight" => 4.33,
+    "heelHeight" => 3.94,
     "composition" => "Natural Leather",
-    "color" => "Black",
+    "color" => "Gold",
     "colorAvailable" => true
 ];
-
 $catalog[103] = [
     "code" => "NEP1",
     "title" => "Ella Pump",
@@ -200,7 +195,7 @@ $catalog[108] = [
 ];
 $catalog[109] = [
     "code" => "NSD1",
-    "title" => "Wedgy Pump",
+    "title" => "Sarita Pump",
     "category" => "pumps",
     "thumb" => "/img/thumbnails/saritaPump1.jpg",
     "img" => [
@@ -217,7 +212,7 @@ $catalog[109] = [
                      "url" => "/img/shoes/pumps/sarita/saritaPump4.jpg"
                     ],
             ],
-    "details" => "Wedgy slip on",
+    "details" => "Wedge, slip on",
     "heelHeight" => 3.5,
     "composition" => "Natural Leather",
     "color" => "Blue Marine",
@@ -245,9 +240,10 @@ $catalog[110] = [
     "details" => "Slip on",
     "heelHeight" => 3.5,
     "composition" => "Natural Leather",
-    "color" => "color/White",
+    "color" => "coral/white/black",
     "colorAvailable" => false
 ];
+
 $catalog[201] = [
     "code" => "NICM1",
     "title" => "Maya Sandal",
@@ -274,29 +270,29 @@ $catalog[201] = [
     "colorAvailable" => true
 ];
 $catalog[202] = [
-    "code" => "5S1",
-    "title" => "Jolie Sandal",
+    "code" => "NICSJ",
+    "title" => "Juliene Sandal",
     "category" => "sandals",
-    "thumb" => "/img/thumbnails/jolieSandal1.jpg",
+    "thumb" => "/img/thumbnails/julieneSandal1.jpg",
     "img" => [
-                 [  "picIds" => "jolieSandal1",
-                     "url" => "/img/shoes/sandals/jolie/jolieSandal1.jpg"
+                 [  "picIds" => "julieneSandal1",
+                     "url" => "/img/shoes/sandals/juliene/julieneSandal1.jpg"
                     ],
-                 [  "picIds" => "jolieSandal2",
-                     "url" => "/img/shoes/sandals/jolie/jolieSandal2.jpg"
+                 [  "picIds" => "julieneSandal2",
+                     "url" => "/img/shoes/sandals/juliene/julieneSandal2.jpg"
                     ],
-                 [  "picIds" => "jolieSandal3",
-                     "url" => "/img/shoes/sandals/jolie/jolieSandal3.jpg"
+                 [  "picIds" => "julieneSandal3",
+                     "url" => "/img/shoes/sandals/juliene/julieneSandal3.jpg"
                     ],
-                 [  "picIds" => "jolieSandal4",
-                     "url" => "/img/shoes/sandals/jolie/jolieSandal4.jpg"
+                 [  "picIds" => "julieneSandal4",
+                     "url" => "/img/shoes/sandals/juliene/julieneSandal4.jpg"
                     ],
             ],
-    "details" => "Strappy Sandal",
-    "heelHeight" => 3.93,
+    "details" => "Strappy Sandal with soft tassel tie and stiletto heel",
+    "heelHeight" => 3.5,
     "composition" => "Natural Leather",
-    "color" => "Multicolor",
-    "colorAvailable" => true
+    "color" => "Khaki",
+    "colorAvailable" => false
 ];
 $catalog[203] = [
     "code" => "5S1",
@@ -317,7 +313,7 @@ $catalog[203] = [
                      "url" => "/img/shoes/sandals/julieAnkleTie/julieAnkleTieSandal4.jpg"
                     ],
             ],
-    "details" => "Lush Suede Straps can be wrapped around your ankle or just tied in a floppy bow.",
+    "details" => "Suede Straps can be wrapped around ankle or tied in a floppy bow.",
     "heelHeight" => 0.4,
     "composition" => "Natural Leather",
     "color" => "Khaki",
@@ -350,7 +346,7 @@ $catalog[204] = [
 ];
 $catalog[206] = [
     "code" => "5RS",
-    "title" => "Libertine Sandal",
+    "title" => "Rose Sandal",
     "category" => "sandals",
     "thumb" => "/img/thumbnails/roseSandal1.jpg",
     "img" => [
@@ -396,5 +392,74 @@ $catalog[207] = [
     "heelHeight" => 3.5,
     "composition" => "Natural Leather",
     "color" => "Red/Nude",
+    "colorAvailable" => true
+];
+$catalog[208] = [
+    "code" => "NCAP",
+    "title" => "Caresse Sandal",
+    "category" => "sandals",
+    "thumb" => "/img/thumbnails/caresseSandal1.jpg",
+    "img" => [
+                 [  "picIds" => "caresseSandal1",
+                     "url" => "/img/shoes/sandals/caresse/caresseSandal1.jpg"
+                    ],
+                 [  "picIds" => "caresseSandal2",
+                     "url" => "/img/shoes/sandals/caresse/caresseSandal2.jpg"
+                    ],
+            ],
+    "details" => "Chunky Heel Sandal",
+    "heelHeight" => 3.5,
+    "composition" => "Natural Leather",
+    "color" => "Animal Print",
+    "colorAvailable" => true
+];
+$catalog[209] = [
+    "code" => "5YA",
+    "title" => "Libertine Sandal",
+    "category" => "sandals",
+    "thumb" => "/img/thumbnails/libertineSandal1.jpg",
+    "img" => [
+                 [  "picIds" => "libertineSandal1",
+                     "url" => "/img/shoes/sandals/libertine/libertineSandal1.jpg"
+                    ],
+                 [  "picIds" => "libertineSandal2",
+                     "url" => "/img/shoes/sandals/libertine/libertineSandal2.jpg"
+                    ],
+                 [  "picIds" => "libertineSandal3",
+                     "url" => "/img/shoes/sandals/libertine/libertineSandal3.jpg"
+                    ],
+                 [  "picIds" => "libertineSandal4",
+                     "url" => "/img/shoes/sandals/libertine/libertineSandal4.jpg"
+                    ],
+            ],
+    "details" => "Chunky Heel Sandal",
+    "heelHeight" => 3.5,
+    "composition" => "Natural Leather",
+    "color" => "Yellow/Animal Print",
+    "colorAvailable" => true
+];
+$catalog[210] = [
+    "code" => "5S1",
+    "title" => "Jolie Sandal",
+    "category" => "sandals",
+    "thumb" => "/img/thumbnails/jolieSandal1.jpg",
+    "img" => [
+                 [  "picIds" => "jolieSandal1",
+                     "url" => "/img/shoes/sandals/jolie/jolieSandal1.jpg"
+                    ],
+                 [  "picIds" => "jolieSandal2",
+                     "url" => "/img/shoes/sandals/jolie/jolieSandal2.jpg"
+                    ],
+                 [  "picIds" => "jolieSandal3",
+                     "url" => "/img/shoes/sandals/jolie/jolieSandal3.jpg"
+                    ],
+                 [  "picIds" => "jolieSandal4",
+                     "url" => "/img/shoes/sandals/jolie/jolieSandal4.jpg"
+                    ],
+            ],
+    "details" => "Strappy Sandal",
+    "heelHeight" => 3.93,
+    "composition" => "Natural Leather",
+    "color" => "Multicolor",
     "colorAvailable" => true
 ];

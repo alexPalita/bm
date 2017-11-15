@@ -173,8 +173,8 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group group-message col-12">
-                                                <label class="sr-only" for="message">Message</label>
-                                                <textarea rows="5" name="message" placeholder="Message" class="contact-message form-control" id="message" value="<?php if (isset($message)) { echo $message;}?>" ></textarea>
+                                                <label class="sr-only" for="emailMessage">Message</label>
+                                                <textarea rows="5" name="emailMessage" placeholder="Message" class="contact-message form-control" id="emailMessage" value="<?php if (isset($emailMessage)) { echo $emailMessage;}?>" ></textarea>
                                             </div>
                                         </div>
                                         <div class="row">

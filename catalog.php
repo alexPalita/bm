@@ -4,7 +4,6 @@
     $h1Title = "Shoes";
     $section = null;
     $jsAsset = null;
-    $pageTitle = "$h1Title | La Bagguette de la Marraine";
 
     if (isset($_GET["cat"])) {
         if ($_GET["cat"] == "pumps") {
@@ -15,6 +14,7 @@
             $section = "sandals";
         }
     }
+    $pageTitle = "$h1Title | La Bagguette de la Marraine";
     include "inc/header.php";
 ?>
     <main class="contentShoesPage container d-flex flex-column text-left px-0 animsition">
