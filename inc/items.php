@@ -5,24 +5,35 @@ $catalog[101] = [
     "title" => "Marraine Pump",
     "category" => "pumps",
     "thumb" => "/img/thumbnails/marrainePump1.jpg",
-    "img" => [
-                 [  "picIds" => "marrainePump1",
-                     "url" => "/img/shoes/pumps/marraine/marrainePump1.jpg"
-                    ],
-                 [  "picIds" => "marrainePump2",
-                     "url" => "/img/shoes/pumps/marraine/marrainePump2.jpg"
-                    ],
-                 [  "picIds" => "marrainePump3",
-                     "url" => "/img/shoes/pumps/marraine/marrainePump3.jpg"
-                    ],
-                 [  "picIds" => "marrainePump4",
-                     "url" => "/img/shoes/pumps/marraine/marrainePump4.jpg"
-                    ],
+    "img" => [ "electric-blue" =>[
+                             [  "picIds" => "marrainePump1",
+                                 "url" => "/img/shoes/pumps/marraine/marrainePump1.jpg",
+                                ],
+                             [  "picIds" => "marrainePump2",
+                                 "url" => "/img/shoes/pumps/marraine/marrainePump2.jpg"
+                                ],
+                             [  "picIds" => "marrainePump3",
+                                 "url" => "/img/shoes/pumps/marraine/marrainePump3.jpg"
+                                ],
+                             [  "picIds" => "marrainePump4",
+                                 "url" => "/img/shoes/pumps/marraine/marrainePump4.jpg"
+                                ],
+                        ],
+                "black" =>[
+                            [  "picIds" => "etoilePump1",
+                                "url" => "/img/shoes/pumps/etoile/etoilePump1.jpg"
+                               ],
+                            [  "picIds" => "etoilePump2",
+                                "url" => "/img/shoes/pumps/etoile/etoilePump2.jpg"
+                               ],
+                            [  "picIds" => "etoilePump3",
+                                "url" => "/img/shoes/pumps/etoile/etoilePump3.jpg"
+                               ],
+                        ],
             ],
     "details" => "High Heel Pump",
     "heelHeight" => 4,
     "composition" => "Natural Leather",
-    "color" => "Electric Blue",
     "colorAvailable" => true
 ];
 
@@ -66,6 +77,9 @@ $catalog[103] = [
                  [  "picIds" => "ellaPump4",
                      "url" => "/img/shoes/pumps/ella/ellaPump4.jpg"
                     ],
+                 // [  "picIds" => "ellaPump5",
+                 //     "url" => "/img/shoes/pumps/ella/ellaPump5.jpg"
+                 //    ],
             ],
     "details" => "Slip on",
     "heelHeight" => 3.5,

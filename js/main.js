@@ -63,6 +63,41 @@ $(function() {
         $firstTabPane.addClass('active show');
     }
 
+    var $carouselItem = $('#carouselTabPanes .carousel-item');
+    var $carouselfirstTabPane = $('#carouselTabPanes .carousel-item:first-child');
+    var $carouselNavLinkfirst = $('#carouselTabPanes .nav-item:first-child >nav-link');
+    var $carouselNavLink = $('#carouselTabPanes .nav-item > .nav-link');
+
+    if (!$carouselItem.hasClass('active')) {
+        $carouselfirstTabPane.addClass('active');
+        $carouselNavLinkfirst.addClass('active');
+    }
+
+
+    $carouselNavLink.click(function(){
+        var $thisItem = $(this).closest('ul');
+
+        if (!$('#carouselTabPanes ul').hasClass('active')) {
+            $thisItem.toggleClass('active');
+            console.log('true');
+        } else {
+            console.log('wrong');
+        }
+    });
+    // $('#carouselTabPanes .active').click(function(ev) {
+    //         ev.preventDefault();
+    //         if (!$carouselItem.hasClass('active') && ) {
+    //             this.;
+    //          }
+    // });
+
+    // var $activeNavLink = $('#carouselTabPanes > ul nav-link');
+
+
+    // if (!activeTabPane.hasClass('active') && $activeTabPane.find('nav-link').hasClass('active')) {
+    //     $activeTabPane.find('nav-link').removeClass('active');
+    // }
+
 
     var $navContainer = $('#navContainer');
     var $contentLandingPage = $('.contentLandingPage');
@@ -89,7 +124,6 @@ $(function() {
     $('.tab-pane .toEnlarge').on('click', function(ev) {
         if (($(window).width() < 769) && (window.matchMedia("(orientation: portrait)").matches)) {
             ev.preventDefault();
-            console.log("CACAT");
         }
         else {
             ev.preventDefault();
