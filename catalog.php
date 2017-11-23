@@ -12,6 +12,9 @@
         } elseif ($_GET["cat"] == "sandals") {
             $h1Title = "Sandals";
             $section = "sandals";
+        } elseif ($_GET["cat"] == "booties") {
+            $h1Title = "Booties";
+            $section = "Booties";
         }
     }
     $pageTitle = "$h1Title | La Bagguette de la Marraine";
