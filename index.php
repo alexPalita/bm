@@ -109,7 +109,7 @@
                         <img src="img/bm/borderTop.svg" alt="" class="tBorder">
                             <a href="/pumps" class="shoesImgContainer">
                                 <figure class="pumpsA">
-                                    <img src="img/bm/pumps.svg" alt="Pumps Sketch" id="pumpsSketch">
+                                    <img src="img/bm/pumps.png" alt="Pumps Sketch" id="pumpsSketch">
                                     <figcaption class="shoesLink text-center">PUMPS</figcaption>
                                 </figure>
                             </a>
@@ -120,7 +120,7 @@
                         <img src="img/bm/borderTop.svg" alt="" class="tBorder">
                         <a href="/sandals" class="shoesImgContainer">
                             <figure  class="sandalsA">
-                                <img src="img/bm/sandals.svg" alt="Sandals Sketch" id="sandalsSketch">
+                                <img src="img/bm/sandals.png" alt="Sandals Sketch" id="sandalsSketch">
                                 <figcaption class="shoesLink text-center">SANDALS</figcaption>
                             </figure>
                         </a>

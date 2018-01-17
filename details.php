@@ -33,11 +33,14 @@ include "inc/header.php";
                             echo '<div class="tab-pane flex-nowrap fade" id="list-'.$keyColor.'" role="tabpanel"      aria-labelledby="list-'.$keyColor.'-list">'
                                 .'<div class="tab-content order-lg-2 mx-auto col-lg-10" >';
                                 foreach($value as $color) {
-                                echo    '<div class="tab-pane fade" id='.$color["picIds"].' role="tabpanel" >'
+                                $id = substr($color["url"], strrpos($color["url"], '/') + 1);
+                                $imgID = strstr($id,".",true);
+                                echo    '<div class="tab-pane fade" id='.$imgID.' role="tabpanel" >'
                                             .'<a href="'.$color["url"].'">'
                                             .'<img class="toEnlarge" alt="Pumps" src="'.$color["url"].'" >'
                                             .'</a>'
                                        .'</div>';
+
                                     }
                                 echo '</div>'
                                 .'<ul class="nav nav-tabs order-lg-1 col-lg-2 px-0 mx-auto justify-content-center align-content-start" role="tablist">';
