@@ -538,6 +538,15 @@ $catalog[202] = [
                     "/img/shoes/sandals/juliene/julieneSandal4.jpg",
 
                 ],
+                "coral,ce4045" =>
+
+                [
+
+                    "/img/shoes/sandals/juliene/julieneSandal5.jpg",
+
+                    "/img/shoes/sandals/juliene/julieneSandal6.jpg",
+
+                ],
 
             ],
 
