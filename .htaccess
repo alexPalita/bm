@@ -1,9 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-  RewriteRule ^([a-zA-Z]+)$ catalog?cat=$1 [NC]
-  RewriteRule ^([a-zA-Z]+)/([0-9]+)/([A-Za-z_é-]+)$ details?category=$1&id=$2&title=$3 [NC,L]
-  RewriteRule ^([a-zA-Z_-]+)/([A-Za-z_é-]+)$ order?action=$1&product_name=$2 [NC,L]
-
-  RewriteCond %{SCRIPT_FILENAME} !-d
-  RewriteRule ^([^.]+)$ $1.php [NC,L]
-</IfModule>
